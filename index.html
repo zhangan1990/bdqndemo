@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张安 | 算法工程师</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* 基础样式 */
+        :root {
+            --primary-color: rgb(162, 56, 56);
+            --secondary-color: rgb(202, 125, 102);
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 首屏 */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px;
+            background: linear-gradient(45deg, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* 内容区块 */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+        }
+
+        /* 经历卡片 */
+        .experience-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            transition: transform 0.3s;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 技能标签 */
+        .skill-tag {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: #f3f4f6;
+            border-radius: 20px;
+            margin: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* 联系方式 */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 4rem 1rem;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2>张安</h2>
+            <div class="nav-links">
+                <a href="#about">关于我</a>
+                <a href="#experience">专业经历</a>
+                <a href="#skills">技能</a>
+                <a href="#education">教育背景</a>
+                <a href="#contact">联系</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首屏 -->
+    <section class="hero">
+        <div>
+            <h1>张安</h1>
+            <p>算法工程师 | 无人机硬件优化专家</p>
+            <p>通过算法创新提升硬件性能与可靠性</p>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about">
+        <h2 class="section-title">关于我</h2>
+        <p>哈佛大学计算机技术专业毕业生，专注于算法研发与硬件性能优化。在大疆创新主导多个关键算法项目，擅长将机器学习与大数据分析应用于硬件优化领域。</p>
+    </section>
+
+    <!-- 专业经历 -->
+    <section id="experience">
+        <h2 class="section-title">专业经历</h2>
+        <div class="experience-card">
+            <h3>大疆创新 - 算法工程师 (2021.07-至今)</h3>
+            <ul>
+                <li>主导无人机硬件性能优化算法开发，提升飞行稳定性25%</li>
+                <li>研发硬件故障预测系统，预测准确率达80%</li>
+                <li>开发多传感器数据融合算法，提升环境感知能力40%</li>
+                <li>优化硬件测试算法，提高测试效率30%</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 技能 -->
+    <section id="skills">
+        <h2 class="section-title">专业技能</h2>
+        <div>
+            <span class="skill-tag">机器学习</span>
+            <span class="skill-tag">大数据分析</span>
+            <span class="skill-tag">传感器融合</span>
+            <span class="skill-tag">Python/C++</span>
+            <span class="skill-tag">硬件测试自动化</span>
+        </div>
+    </section>
+
+    <!-- 教育背景 -->
+    <section id="education">
+        <h2 class="section-title">教育背景</h2>
+        <div class="experience-card">
+            <h3>哈佛大学 (2017-2021)</h3>
+            <p>计算机技术专业本科</p>
+            <p>主修课程：人工智能、算法设计、硬件系统优化</p>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact">
+        <h2 class="section-title">联系方式</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>电话</h3>
+                <p>13763388888</p>
+            </div>
+            <div class="contact-item">
+                <h3>邮箱</h3>
+                <p>184625671@qq.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer style="background: var(--primary-color); color: white; text-align: center; padding: 2rem;">
+        <p>© 2023 张安 - 算法工程师</p>
+    </footer>
+
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 滚动动画
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.experience-card, .skill-tag').forEach((el) => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
